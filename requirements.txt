@@ -1,1 +1,34 @@
-sdf
+# --- Core Framework ---
+fastapi
+uvicorn[standard]       # Includes websockets for your Chat Module
+pydantic
+pydantic-settings
+
+# --- Database (Relational + Vector) ---
+sqlalchemy              # For SQLite (Users, Projects, Chat History)
+alembic                 # For database migrations
+chromadb                # The Vector Store (for RAG/Knowledge Base)
+
+# --- AI & Intelligence ---
+langchain               # The main framework for chains/prompts
+langchain-community     # Loaders and tool integrations
+langchain-ollama        # For local models (Llama 3, Mistral)
+langchain-openai        # For cloud models (GPT-4)
+tiktoken                # Essential for your 'Context Management' module (counting tokens)
+
+# --- Utilities ---
+python-multipart        # Required for File Uploads in the UI
+aiofiles                # For reading uploaded files asynchronously
+httpx                   # For making async API calls
+rich                    # Better logging in your terminal
+# ... (Previous core packages: fastapi, uvicorn, etc.) ...
+
+# --- Context & Token Management ---
+tiktoken                # Accurate token counting
+textstat                # (Optional) Detect junk/complex text
+
+# --- Prompt Engineering ---
+jinja2                  # Advanced prompt templates with loops/logic
+
+# --- Performance & Caching ---
+diskcache               # Cache expensive context operations
